@@ -1,15 +1,19 @@
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
+
         temp1 = headA
-        count1 = 0
-        count2 = 0
         temp2 = headB
-        while temp1:
-            while temp2:
-                if temp1 == temp2:
-                    return temp2
-                else:
-                    temp2 = temp2.next
-            temp2 = headB
-            temp1 = temp1.next
-        return None
+
+        while temp1 != temp2:
+
+            if temp1:
+                temp1 = temp1.next
+            else:
+                temp1 = headB
+
+            if temp2:
+                temp2 = temp2.next
+            else:
+                temp2 = headA
+
+        return temp1
