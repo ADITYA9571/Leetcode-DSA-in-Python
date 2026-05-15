@@ -1,0 +1,43 @@
+class Solution:
+    def intToRoman(self, num: int) -> str:
+        str1 = ""
+        while num >= 1000:
+            num = num - 1000
+            str1 = str1 + "M"
+        if num >= 900:
+            str1 = str1 + "CM"
+            num = num - 900
+        if num >= 500:
+            str1 = str1 + "D"
+            num = num - 500
+        if num >= 400:
+            str1 = str1 + "CD"
+            num = num - 400
+        while num >= 100:
+            str1 = str1 + "C"
+            num = num - 100
+        if num >= 90:
+            str1 = str1 + "XC"
+            num = num - 90
+        if num >= 50:
+            str1 = str1 + "L"
+            num = num - 50
+        if num >= 40:
+            str1 = str1 + "XL"
+            num = num - 40
+        while num >= 10:
+            str1 = str1 + "X"
+            num = num - 10
+        if num >= 9:
+            str1 = str1 + "IX"
+            num = num - 9
+        if num >= 5:
+            str1 = str1 + "V"
+            num = num - 5
+        if num >= 4:
+            str1 = str1 + "IV"
+            num = num - 4
+        while num >= 1:
+            str1 = str1 + "I"
+            num = num - 1
+        return str1
