@@ -5,21 +5,21 @@ class Solution:
         temp2 = 0
         length = len(nums)
         flag = 0
-        for i, num in enumerate(nums[:-1]):
+        
+        for i, num in enumerate(nums):
             if flag == 0:
                 temp1 = num
                 flag = 1
-            if num == nums[i+1] - 1:
-                continue 
+            if num != nums[-1] and num == nums[i+1] - 1:
+                later = 1
+                if num != nums[-2]:
+                    continue 
             else:
+                later = 0
                 temp2 = num
                 flag = 0
                 if temp1 == temp2:
                     list1.append(f"{temp1}")
                 else:
                     list1.append(f"{temp1}->{temp2}")
-        if nums[-1] != nums[-2]:
-            list1.append(f"{nums[-1]}")
         return list1
-
-# list1.append(f"{temp1}->{i-1}")
