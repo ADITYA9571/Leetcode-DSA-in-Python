@@ -1,3 +1,4 @@
+# PART OF DAILY LEETCODE PROBLEM 
 class Solution:
     def asteroidsDestroyed(self, mass: int, asteroids: List[int]) -> bool:
         asteroids.sort()
