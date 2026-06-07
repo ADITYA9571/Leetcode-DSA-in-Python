@@ -1,4 +1,4 @@
-# PART OF DAILY LEETCODE PROBLEM
+# PART OF DAILY LEETCODE PROBLEMQ
 class Solution:
     def leftRightDifference(self, nums: List[int]) -> List[int]:
         if len(nums) == 1:
